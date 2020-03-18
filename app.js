@@ -1,4 +1,5 @@
 const   express = require("express"),
+        port    = process.env.port || 6985,
         app     = express();
 
 app.set("view engine","ejs");
@@ -14,6 +15,6 @@ app.get("/about",(req,res)=>{
 });
 
 
-app.listen(6985,()=>{
-    console.log("deploy demo app runing on 6985");
+app.listen(port,()=>{
+    console.log('deploy demo app runing on '+port);
 });
