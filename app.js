@@ -1,7 +1,7 @@
 const   express = require("express"),
-        port    = process.env.port || 6985,
         app     = express();
 
+const port = process.env.port() || 6985;
 app.set("view engine","ejs");
 
 // routes
